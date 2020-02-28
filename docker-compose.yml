@@ -1,0 +1,12 @@
+version: '3'
+services:
+    chrome_standalone:
+        restart: always
+        image: selenium/standalone-chrome-debug:latest
+        volumes:
+            - /dev/shm:/dev/shm
+        ports:
+            - 1111:4444
+            - "5900"
+        stdin_open: true
+
